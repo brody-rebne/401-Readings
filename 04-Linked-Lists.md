@@ -1,0 +1,21 @@
+# Linked Lists
+
+- A linked list is a data structure that contains nodes
+- Each node contains a value, and a reference pointing to the next node in the list
+- This creates a virtual chain of values that is not bound by size constraints, while allowing memory to be effectively allocated for the data structure
+- They are easy on memory since they are really separate objects which just point to eachother, so they don't have to exist in one block of memory
+- Two types of LLs - Singly and Doubly linked
+  - Singly linked lists have only one reference, which points to the next node
+  - Doubly linked lists point to both the next and the previous nodes
+  - There are also circular linked lists but I don't want to think about those too much
+- `Head` is a reference which defines to first node in a list
+- `Head` is not a physical thing, nor a property of an node, but a reference to a node
+- `Current` is a reference to the current node being looked at
+- `Current` is used similarly to `i` is in a for loop, when traversing over an LL
+- To traverse, use a `while` loop which breaks when the `Next` node is null
+- While traversing an LL, the current node's value can be accessed by writing `Current.Value`, and the next node can be found by writing `Current.Next`
+- You can add a new node to an LL with these 4 steps:
+  - Set current node as Head (ensuring you are at the beginning of the list)
+  - Instantiate a new node (not yet in the list)
+  - Set the `.Next` of the new node input as the current Head
+  - Now the new node is at the beginning of the list, but it still must be manually set as the new Head (and Current as well for convenience) to complete the addition
