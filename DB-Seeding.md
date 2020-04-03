@@ -1,0 +1,15 @@
+## Data Seeding
+- Process of populating database with initial data
+- Useful for testing database and things that use it
+- Can be done 3 ways:
+- #### Model Seed Data:
+  - A fairly new feature (2018)
+  - Allows for more automatic population of data from objects
+  - Standard call: `modelBuilder.Entity<ObjType>().HasData(new ObjType { PropOne = 1, PropTwo = "value"});`
+  - Limitations:
+    - Primary key cannot be serialized by db, must be manually written
+    - If a primary key is given which already exists, the existing data will be overwritten
+- #### Manual Migration Customization
+  - Manual migration of existing data into new database (?)
+- #### Custom Initialization Logic
+  - Saving temp(?) content to database before the main app logic starts
