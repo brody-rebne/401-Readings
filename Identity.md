@@ -10,3 +10,13 @@
   - Done in `ConfigureServices` method
   - Refer to [reading](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.1&tabs=visual-studio#configure-identity-services-1) for configuration
 - Identity services should be ready to scaffold into views and controllers
+- #### [Register](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.1&tabs=visual-studio#examine-register-1
+  - Taking user input
+  - Checking if successful
+  - Sending email confirmation
+  - Asking for email confirmation
+  - Signing in with `SignInAsync()`
+- #### Log in
+  - Similar to register, but with optional 2-factor auth check instead of optional email confirmation, and obviously a validity check against extant logins
+- #### Log out
+  - Simple `SignOutAsync()` once current user is found
