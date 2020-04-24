@@ -21,4 +21,3 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 - Policies are added to MVC controllers or Razor Pages with the attribute [Authorize(Policy = "PolicyName")] above the class declaration
-- 
