@@ -1,0 +1,21 @@
+## SendGrid
+
+- SendGrid is a cloud-based email service
+- It is provided with an Azure subscription with up to 25,000 free monthly emails
+- Create an account by creating a new resource from the Azure portal (similar to creating a new database or app service)
+- Emails are sent using an API key, also gotten from the Azure portal
+- Add the SendGrid NuGet package to the project to use SendGrid
+- Include the `SendGrid` and `SendGrid.Helpers.Mail` namespaces in your project wherever needed
+- Creating an email requires only a few steps:
+  - `var msg = new SendGridMessage()` creates the email
+  - `msg.SetFrom(new EmailAddress("handle@site.com", "Display Name");` - adds the sender info. This email will obviously need to be set up and working.
+  - `var recipients = new List<EmailAdresses> { [email address objects go here] };` - adds a list of recipients. This list would presumably be generated elsewhere.
+  - `msg.AddTos(recipients` - not sure
+  - `msg.SetSubject("Subject");`
+  - msg.AddContent(Mimetype.[Text or Html], "Message text goes here. If I'm HTML I will need proper tags!")`
+- Sending an email requires more setup
+- Code for sending an email:
+  - Instantiate a client, passing in the API key
+  - Follow steps similar to above to create the email
+  - Send the email (async)
+- SendGrid also has the capability to add attachments, and track analytics on the email
